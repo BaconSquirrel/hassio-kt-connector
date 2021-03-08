@@ -10,14 +10,11 @@ import java.lang.RuntimeException
 interface HassioConnector {
     class CallServiceFailedException(message: String?) : RuntimeException(message)
 
-    //
-    //
+    val entityStateChanges: Observable<EntityState>
+    val entityEvents: Observable<EntityEvent>
 
-    fun connect(): Completable
-
-    fun observeEntityStateChanges(): Observable<EntityState>
-
-    fun observeEntityEvents(): Observable<EntityEvent>
+    fun start()
+    fun stop() : Completable
 
     /**
      * Issues the necessary calls to the home assistant service that are needed to fulfill the messages intentions.
@@ -27,6 +24,4 @@ interface HassioConnector {
      *     reported not successfully.
      */
     fun callServiceWith(message: ServiceMessage): Completable
-
-    fun shutdown(): Completable
 }
