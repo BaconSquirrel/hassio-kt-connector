@@ -14,7 +14,7 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
     implementation("io.github.microutils:kotlin-logging:1.8.3")
-    testImplementation("org.slf4j:slf4j-simple:1.7.29")
+    implementation("org.slf4j:slf4j-simple:1.7.29")
 
     implementation("com.squareup.okhttp3:okhttp:4.4.0")
     implementation("com.beust:klaxon:5.2")
