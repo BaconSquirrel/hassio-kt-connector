@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "de.baconsquirrel"
-version = "1.0"
+version = "2.0.0-rc03"
 
 repositories {
     mavenCentral()
@@ -19,7 +19,7 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.4.0")
     implementation("com.beust:klaxon:5.2")
 
-    implementation("io.reactivex.rxjava2:rxkotlin:2.4.0")
+    api("io.reactivex.rxjava2:rxkotlin:2.4.0")
 }
 
 tasks {
